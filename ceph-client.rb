@@ -72,11 +72,6 @@ class CephClient < Formula
       rados
       rbd
       cephfs
-      ceph-conf
-      ceph-fuse
-      manpages
-      cython_rados
-      cython_rbd
     ]
     mkdir "build" do
       system "cmake", "-G", "Ninja", "..", *args, *std_cmake_args
