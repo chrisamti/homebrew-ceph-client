@@ -79,7 +79,6 @@ class CephClient < Formula
       executables = %w[
         bin/rados
         bin/rbd
-        bin/ceph-fuse
       ]
       executables.each do |file|
         MachO.open(file).linked_dylibs.each do |dylib|
@@ -118,7 +117,6 @@ class CephClient < Formula
       end
       %w[
         ceph-conf
-        ceph-fuse
         ceph
         librados-config
         rados
