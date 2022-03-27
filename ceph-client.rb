@@ -91,7 +91,6 @@ class CephClient < Formula
       %w[
         ceph
         ceph-conf
-        ceph-fuse
         rados
         rbd
       ].each do |file|
@@ -143,11 +142,11 @@ class CephClient < Formula
 
   test do
     system "#{bin}/ceph", "--version"
-    system "#{bin}/ceph-fuse", "--version"
+    # system "#{bin}/ceph-fuse", "--version"
     system "#{bin}/rbd", "--version"
     system "#{bin}/rados", "--version"
-    system "python", "-c", "import rados"
-    system "python", "-c", "import rbd"
+    # system "python", "-c", "import rados"
+    # system "python", "-c", "import rbd"
   end
 end
 
